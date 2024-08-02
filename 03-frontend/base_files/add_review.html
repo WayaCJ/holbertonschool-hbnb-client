@@ -7,16 +7,33 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <nav>
+        <a href="index.html">
+            <img src="logo.png" alt="logo" class="logo">
+            </a>
+        </nav>
+    </header>
     <main>
+        <h1>Add a Review</h1>
         <form id="review-form">
-            <h2>Add a Review</h2>
-            <label for="place">Place:</label>
-            <input type="text" id="place" name="place" readonly>
-            
-            <label for="review">Review:</label>
-            <textarea id="review" name="review" required></textarea>
-            
-            <button type="submit">Submit</button>
+            <div class="form"
+            <form action="submit_review.php" method="post" class="form">
+                            <label for="review-comment">Your Review:</label>
+                            <textarea id="review-comment" name="review-comment" required></textarea>
+                            
+                            <label for="review-rating">Rating:</label>
+                            <select id="review-rating" name="review-rating" required>
+                                <option value="5">5 Stars</option>
+                                <option value="4">4 Stars</option>
+                                <option value="3">3 Stars</option>
+                                <option value="2">2 Stars</option>
+                                <option value="1">1 Star</option>
+                            </select>
+            </select>
+            </form>
+            <button type="submit">Submit Review</button>
+        </div>
         </form>
     </main>
     <script src="scripts.js"></script>

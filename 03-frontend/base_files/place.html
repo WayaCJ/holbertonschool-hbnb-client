@@ -5,25 +5,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Place Details</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="icon.png" type="image/png">
 </head>
 <body>
+    <header>
+        <nav>
+            <a href="index.html">
+                <img src="logo.png" alt="logo" class="logo">
+            </a>
+            </nav>
+        <nav>
+            <a href="login.html" id="login-link">Login</a>
+        </nav>
+    </header>
     <main>
-        <section id="place-details">
-            <!-- Place details will be populated dynamically -->
-        </section>
-        <section id="reviews">
-            <!-- Reviews will be populated dynamically -->
-        </section>
+        <div class="places-grp">
+            <section id="place-details">
+                <div class="place-image-large">
+                    <img src="../images/beachhouse.png" alt="Beach House">
+                    <h1>Beautiful Beach House</h1>
+                    <p><strong>Host:</strong> Holberton</p>
+                    <p><strong>Price:</strong> $150 Price per night</p>
+                    <p><strong>Location:</strong> Long Beach, California</p>
+                    <p><strong>Description:</strong> Beautiful House near the beach. Amazing location for activities.</p>
+                    <p><strong>Amenities:</strong> <img src="icon_wifi.png"> <img src="icon_bath.png"> <img src="icon_bed.png"></p>
+                </div>
+            </section>
+                <section id="reviews">
+                    <h2>Reviews</h2>
+                    <div class="review-card">
+                        <p><strong>User:</strong> James Santos</p>
+                        <p><strong>Comment:</strong> Great Location and amazing host!</p>
+                        <p><strong>Rating:</strong> ★★★★☆</p>
+                    </div>
+                    <div class="review-card">
+                        <p><strong>User:</strong> 1223pescao</p>
+                        <p><strong>Comment:</strong> Cool location and amazing bed.</p>
+                        <p><strong>Rating:</strong> ★★★★☆</p>
+                    </div>
+                    <div class="review-card">
+                        <p><strong>User:</strong> John Doe</p>
+                        <p><strong>Comment:</strong> Everything was amazing!</p>
+                        <p><strong>Rating:</strong> ★★★★☆</p>
+                    </div>
+                    <div class="place-image-large">
+                        <img src="../images/cabin.png" alt="Cozy Cabin">
+                        <h1>Cozy cabin</h1>
+                        <p><strong>Host:</strong> Holberton</p>
+                        <p><strong>Price:</strong> $100 Price per night</p>
+                        <p><strong>Location:</strong> Thousand Oaks, California</p>
+                        <p><strong>Description:</strong> Cozy Cabin on the woods. Amazing location for activities.</p>
+                        <p><strong>Amenities:</strong> <img src="icon_wifi.png"> <img src="icon_bath.png"> <img src="icon_bed.png"></p>
+                    </div>
+                </section>
+                    <section id="reviews">
+                        <h2>Reviews</h2>
+                        <div class="review-card">
+                            <p><strong>User:</strong> Holby Smith</p>
+                            <p><strong>Comment:</strong> Great Location and amazing host!</p>
+                            <p><strong>Rating:</strong> ★★★★☆</p>
+                        </div>
+                        <div class="review-card">
+                            <p><strong>User:</strong> Jane</p>
+                            <p><strong>Comment:</strong> Cool location and great view.</p>
+                            <p><strong>Rating:</strong> ★★★★☆</p>
+                        </div>
+                        <div class="review-card">
+                            <p><strong>User:</strong> John Doe</p>
+                            <p><strong>Comment:</strong> Second time i have stayed in one of this host properties and he never miss. Awesome!</p>
+                            <p><strong>Rating:</strong> ★★★★☆</p>
+                        </div>
+                        <div class="place-image-large">
+                            <img src="../images/apartment.png" alt="Modern Apartment">
+                            <h1>Modern Apartment</h1>
+                            <p><strong>Host:</strong> Holberton</p>
+                            <p><strong>Price:</strong> $100 Price per night</p>
+                            <p><strong>Location:</strong> Los Angeles, California</p>
+                            <p><strong>Description:</strong> A modern apartment on the best location. An amazing location to enjoy life in L.A.</p>
+                            <p><strong>Amenities:</strong> <img src="icon_wifi.png"> <img src="icon_bath.png"> <img src="icon_bed.png"></p>
+                        </div>
+                    </section>
+                        <section id="reviews">
+                            <h2>Reviews</h2>
+                            <div class="review-card">
+                                <p><strong>User:</strong> Kiara Smith</p>
+                                <p><strong>Comment:</strong> Great host's communication!</p>
+                                <p><strong>Rating:</strong> ★★★★☆</p>
+                            </div>
+                            <div class="review-card">
+                                <p><strong>User:</strong> Elvis</p>
+                                <p><strong>Comment:</strong> Great space. Suitable for small gatherings.</p>
+                                <p><strong>Rating:</strong> ★★★★☆</p>
+                            </div>
+                            <div class="review-card">
+                                <p><strong>User:</strong> John Doe</p>
+                                <p><strong>Comment:</strong> This host is amazing. 3rd time staying and i do not regret it!</p>
+                                <p><strong>Rating:</strong> ★★★★☆</p>
+                            </div>
+                </section>
+            </script>
+        </div>
         <section id="add-review">
             <h2>Add a Review</h2>
-            <form id="review-form">
-                <label for="review-text">Review:</label>
-                <textarea id="review-text" name="review-text" required></textarea>
-                
-                <button type="submit">Submit</button>
+            <script>
+                var userLoggedIn = true;
+                if (userLoggedIn) {
+                    document.write(`
+                        <form action="submit_review.php" method="post" class="form">
+                            <label for="review-comment">Your Review:</label>
+                            <textarea id="review-comment" name="review-comment" required></textarea>
+                            
+                            <label for="review-rating">Rating:</label>
+                            <select id="review-rating" name="review-rating" required>
+                                <option value="5">5 Stars</option>
+                                <option value="4">4 Stars</option>
+                                <option value="3">3 Stars</option>
+                                <option value="2">2 Stars</option>
+                                <option value="1">1 Star</option>
+                            </select>
+                            
+                            <button type="submit">Submit Review</button>
+                        </form>
+                    `);
+                } else {
+                    document.write('<a href="add_review.html" class="button">Add Review</a>');
+                }
+            </script>
+        </div>
+    </div>
             </form>
         </section>
     </main>
+    <footer> <a href="add_review.html" class="details-button"> Add Review</a> </footer>
     <script src="scripts.js"></script>
 </body>
 </html>
